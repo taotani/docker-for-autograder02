@@ -1,0 +1,12 @@
+version: '2'
+services:
+  grader:
+    image: ta0tani/autograder01
+    command: jupyter lab --ip=0.0.0.0 --allow-root
+    volumes:
+      - ./workspaces:/root/devel/targets
+      - ./results:/root/devel/results
+      - ./work:/root/devel/autoassesmentchecker/work
+        #      - main.ipynb:/root/devel/autoassesmentchecker/python/main.ipynb
+    ports:
+      - 8888:8888
