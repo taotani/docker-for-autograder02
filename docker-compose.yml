@@ -1,8 +1,8 @@
 version: '2'
 services:
   grader:
-    image: ta0tani/autograder01
-    command: jupyter lab --ip=0.0.0.0 --allow-root
+    image: ta0tani/autograder02:1.0
+    # command: jupyter lab --ip=0.0.0.0 --allow-root
     volumes:
       - ./workspaces:/root/devel/targets
       - ./results:/root/devel/results
